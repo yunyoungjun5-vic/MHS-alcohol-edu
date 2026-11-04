@@ -10,7 +10,6 @@ const routes = [
   '/about/experts',
   '/about/media',
   '/about/partnerships',
-  '/about/location',
   '/services/counseling',
   '/services/education',
   '/services/treatment',
@@ -31,7 +30,7 @@ export default defineConfig(({mode}) => {
       react(),
       tailwindcss(),
       Sitemap({
-        hostname: 'https://daegu-dui.mindgate.co.kr/',
+        hostname: 'https://mhs-dui.mindgate.co.kr/',
         dynamicRoutes: routes,
         generateRobotsTxt: true,
         robots: [
