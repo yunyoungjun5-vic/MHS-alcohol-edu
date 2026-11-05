@@ -77,7 +77,7 @@ const trustElements = [
 
 const faqs = [
   {
-    q: "대구 음주운전 비대면 상담도 효과가 있나요?",
+    q: "음주운전 비대면 상담도 효과가 있나요?",
     a: "네, 대면 상담과 동일한 수준의 심층적인 분석과 교정이 이루어집니다. 화상 시스템을 통해 표정과 감정 상태를 세밀하게 파악하며, 오히려 편안한 환경에서 진행되어 내담자의 솔직한 자기 개방과 변화를 이끌어내는 데 매우 효과적입니다."
   },
   {
@@ -122,14 +122,14 @@ const FAQItem: React.FC<{ q: string, a: string }> = ({ q, a }) => {
 export const OnlineProgram = () => {
   useEffect(() => {
     document.title = "비대면 프로그램 | 한국음주운전재범방지교육상담센터";
-    let metaDescription = document.querySelector('meta[name="description"]');
+    const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute("content", "대구 음주운전 비대면 상담 전문센터. 재범방지 교육, 심리상담, 양형자료 준비까지 체계적으로 지원합니다.");
+      metaDescription.setAttribute("content", "음주운전 비대면 상담 전문센터. 재범방지 교육, 심리상담, 양형자료 준비까지 체계적으로 지원합니다.");
     } else {
-      metaDescription = document.createElement('meta');
-      metaDescription.setAttribute("name", "description");
-      metaDescription.setAttribute("content", "대구 음주운전 비대면 상담 전문센터. 재범방지 교육, 심리상담, 양형자료 준비까지 체계적으로 지원합니다.");
-      document.head.appendChild(metaDescription);
+      const meta = document.createElement('meta');
+      meta.setAttribute("name", "description");
+      meta.setAttribute("content", "음주운전 비대면 상담 전문센터. 재범방지 교육, 심리상담, 양형자료 준비까지 체계적으로 지원합니다.");
+      document.head.appendChild(meta);
     }
   }, []);
 
@@ -153,7 +153,7 @@ export const OnlineProgram = () => {
             animate={{ opacity: 1, y: 0 }}
             className="text-4xl lg:text-6xl font-black mb-6 tracking-tighter leading-tight"
           >
-            대구 비대면 음주운전 재범방지<br className="hidden md:block" />
+            비대면 음주운전 재범방지<br className="hidden md:block" />
             교육 및 심리상담 프로그램
           </motion.h1>
           <motion.p 
@@ -171,7 +171,7 @@ export const OnlineProgram = () => {
             className="text-slate-300 text-lg max-w-2xl mx-auto font-medium leading-relaxed mb-12"
           >
             “재범방지 노력은 단순한 말이 아니라<br />
-            전문적인 대구 음주운전 상담 과정과 기록으로 증명되어야 합니다.”
+            전문적인 음주운전 상담 과정과 기록으로 증명되어야 합니다.”
           </motion.p>
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -221,7 +221,7 @@ export const OnlineProgram = () => {
             </p>
             <p className="text-lg lg:text-xl text-slate-500 font-medium">
               이를 가장 설득력 있게 보여주는 방법은<br className="hidden sm:block"/>
-              체계적인 대구 음주운전 재범방지 교육과 상담 과정의 기록입니다.
+              체계적인 음주운전 재범방지 교육과 상담 과정의 기록입니다.
             </p>
           </div>
         </div>
@@ -332,7 +332,7 @@ export const OnlineProgram = () => {
             <h2 className="text-3xl lg:text-4xl font-black text-slate-900 mb-10 tracking-tighter">왜 본 센터인가</h2>
             <div className="bg-white p-10 lg:p-16 rounded-[3rem] shadow-xl border border-slate-100 max-w-4xl mx-auto">
               <p className="text-xl lg:text-2xl font-bold text-slate-800 leading-relaxed mb-8">
-                “재범방지 프로그램 대구 전문 센터만의<br className="hidden sm:block"/> <span className="text-primary">분석 → 교정 → 계획</span>까지 이어지는 구조”
+                “재범방지 프로그램 전문 센터만의<br className="hidden sm:block"/> <span className="text-primary">분석 → 교정 → 계획</span>까지 이어지는 구조”
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center text-lg font-medium text-slate-600">
                 <span className="bg-slate-50 px-6 py-3 rounded-full border border-slate-200">형식이 아닌 실제 변화 중심</span>
@@ -388,7 +388,7 @@ export const OnlineProgram = () => {
               “지금 준비하지 않으면<br className="hidden sm:block"/> 결과는 바뀌지 않습니다”
             </h2>
             <p className="text-primary-foreground/90 text-xl lg:text-2xl mb-12 font-bold">
-              “대구 음주운전 상담, 혼자 준비하지 마십시오”
+              “음주운전 상담, 혼자 준비하지 마십시오”
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 

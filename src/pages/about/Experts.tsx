@@ -35,7 +35,7 @@ interface ExpertItem {
   image: string;
   imagePosition?: string;
   title: string;
-  desc: string;
+  desc: React.ReactNode;
   roles: string;
   linkTo?: string;
   bioSections?: BioSection[];
@@ -247,8 +247,13 @@ const expertGroups: ExpertItem[][] = [
       name: "문영애 교수",
       image:
         "https://res.cloudinary.com/dxjz9ksjg/image/upload/v1779201676/%EB%AC%B8%EC%98%81%EC%95%A0_%EA%B5%90%EC%88%981_q9eo9t.png",
-      title: "상담심리학 박사 / 휠든크라이스 수퍼바이저",
-      desc: "움직임 치료 · 꿈치료 · 코칭을 통한 신체심리 회복 및 전인적 변화 지원.",
+      title: "움직임치료 · 꿈치료 · 전문 코칭",
+      desc: (
+        <>
+          <span className="block">신체와 무의식의 통합적 치유를 통해</span>
+          <span className="block">심리적 안정과 전인적 회복을 지원합니다.</span>
+        </>
+      ),
       roles:
         "상담심리학 박사 / 자아초월상담학 박사 / 휠든크라이스 수퍼바이저",
       bioSections: [
@@ -288,9 +293,14 @@ const expertGroups: ExpertItem[][] = [
       image: "/assets/aistudio/1446168883094_f6a2a5ce.jpg",
       imagePosition: "object-[center_18%]",
       title: "정신분석가 / 프로이트 라캉 학회 대표",
-      desc: "심층 정신분석을 통한 무의식적 충동 이해와 근본적 행동 변화 자문.",
+      desc: (
+        <>
+          <span className="block">심층 정신분석을 통한 무의식적 충동 분석 및</span>
+          <span className="block">근본적 행동 변화를 자문합니다.</span>
+        </>
+      ),
       roles:
-        "서울대학교 박사 / 계명대학교 교수 역임 / 파리 VIII 대학 정신분석학과 DEA",
+        "서울대학교 박사 / 계명대학교 교수 역임 / 프랑스 파리 8대학 DEA",
       bioSections: [
         {
           title: "학력 및 주요 약력",
@@ -412,10 +422,15 @@ const expertGroups: ExpertItem[][] = [
       name: "함종수 교수",
       image:
         "https://res.cloudinary.com/dxjz9ksjg/image/upload/v1793856790/professor_wut7ut.png",
-      title: "애리조나 주립대 철학과 교수 역임 / 미국상담심리치료학회(AACPT) 회장",
-      desc: "철학과 심리학의 깊이 있는 통찰을 통한 근본적 인지 변화 및 회복 자문.",
+      title: "미국상담심리치료학회(AACPT) 회장",
+      desc: (
+        <>
+          <span className="block">철학과 심리학의 깊이 있는 통찰을 바탕으로</span>
+          <span className="block">근본적인 인지 변화와 회복을 자문합니다.</span>
+        </>
+      ),
       roles:
-        "애리조나 주립대 철학과 교수 역임 / 미국상담심리치료학회 회장 / 철학·신학·심리학 박사",
+        "애리조나 주립대 철학과 교수 역임 / 철학·신학·심리학 박사 / 미국 LA 시장상 수상",
       bioSections: [
         {
           title: "학력 및 학위",
@@ -487,14 +502,19 @@ const expertGroups: ExpertItem[][] = [
       image:
         "https://res.cloudinary.com/dxjz9ksjg/image/upload/v1779198673/%EC%A0%84%EA%B2%BD%EC%88%99_%EC%84%A0%EC%83%9D%EB%8B%98_hctbka.png",
       title: "한국뇌기반심리상담 대표 / 상담심리 전문가",
-      desc: "음주 습관 분석 및 알코올 중독 문제 해결을 위한 전문 심리 상담.",
-      roles: "한국뇌기반심리상담 대표 / 뇌인지 박사 수료 / 교육학 명예박사",
+      desc: (
+        <>
+          <span className="block">음주 습관 분석 및 알코올 문제 해결을 위한</span>
+          <span className="block">뇌인지 기반 전문 심리 상담을 제공합니다.</span>
+        </>
+      ),
+      roles: "뇌인지 박사 수료 / 교육학 명예박사 / 자아초월상담심리학 석사",
       bioSections: [
         {
           title: "학력 및 저서",
           icon: "edu",
           items: [
-            "자초월상담심리학 석사",
+            "자아초월상담심리학 석사",
             "명상학 이수",
             "뇌인지 박사 수료",
             "International Christian College HONORARY DOCTOR EDUCATION (Ed.D) 교육학명예박사",
@@ -743,19 +763,23 @@ export const Experts = () => {
                     <p className="text-primary font-bold text-sm mb-2 break-keep">
                       {expert.title}
                     </p>
-                    <p className="text-slate-500 text-sm leading-relaxed mb-2 break-keep">
+                    <div className="text-slate-500 text-sm leading-relaxed mb-2 break-keep">
                       {expert.desc}
-                    </p>
-                    <p className="text-slate-400 text-xs tracking-tight break-keep">
+                    </div>
+                    <div className="text-slate-400 text-xs tracking-tight break-keep flex flex-wrap justify-center items-center gap-y-1">
                       {expert.roles.split(" / ").map((role, i) => (
                         <React.Fragment key={i}>
-                          {role}
+                          <span className="inline-block whitespace-nowrap">
+                            {role}
+                          </span>
                           {i !== expert.roles.split(" / ").length - 1 && (
-                            <span className="inline-block mx-1">·</span>
+                            <span className="inline-block mx-1.5 text-slate-300">
+                              ·
+                            </span>
                           )}
                         </React.Fragment>
                       ))}
-                    </p>
+                    </div>
                   </motion.div>
                 );
               })}

@@ -10,7 +10,7 @@ const coreMaterials = [
     title: "심리상담 확인서",
     subtitle: "상담사실 확인서",
     summary: "재범방지 노력의 시작을 객관적으로 증명하는 자료",
-    desc: "정기적인 심리상담 참여 사실을 공식적으로 확인하는 자료로, 단순한 방문이 아닌 변화를 위한 첫 단계를 입증합니다. 대구 음주운전 상담을 통해 진행된 정기적인 심리상담 참여 사실을 객관적으로 확인하는 자료입니다.",
+    desc: "정기적인 심리상담 참여 사실을 공식적으로 확인하는 자료로, 단순한 방문이 아닌 변화를 위한 첫 단계를 입증합니다. 음주운전 상담을 통해 진행된 정기적인 심리상담 참여 사실을 객관적으로 확인하는 자료입니다.",
     components: [
       "내담자 기본 정보(최소 범위)",
       "상담 기간 및 총 상담 횟수",
@@ -105,7 +105,7 @@ const coreMaterials = [
     title: "재발방지 계획서",
     subtitle: "",
     summary: "재범 방지를 위한 구체적 행동 계획을 담은 자료",
-    desc: "재범 방지를 위한 실제 행동 계획을 명확히 정리한 자료입니다. 재범방지 프로그램 대구 센터의 노하우가 담긴 실천 계획입니다.",
+    desc: "재범 방지를 위한 실제 행동 계획을 명확히 정리한 자료입니다. 재범방지 프로그램 전문 센터의 노하우가 담긴 실천 계획입니다.",
     components: [
       "음주 및 행동 트리거 분석",
       "상황별 대처 전략",
@@ -184,8 +184,8 @@ const additionalMaterials = [
 
 const faqs = [
   {
-    q: "대구에서 음주운전 양형자료는 어떤 것이 필요한가요?",
-    a: "사건의 경위와 개인의 상황에 따라 다르지만, 기본적으로 심리상담 확인서, 재범방지 교육 이수증, 반성문 등이 필요합니다. 대구 음주운전 재범방지 센터에서는 개인별 맞춤형 양형자료 목록을 컨설팅해 드립니다."
+    q: "음주운전 양형자료는 어떤 것이 필요한가요?",
+    a: "사건의 경위와 개인의 상황에 따라 다르지만, 기본적으로 심리상담 확인서, 재범방지 교육 이수증, 반성문 등이 필요합니다. 음주운전 재범방지 센터에서는 개인별 맞춤형 양형자료 목록을 컨설팅해 드립니다."
   },
   {
     q: "음주운전 심리상담은 실제로 도움이 되나요?",
@@ -338,11 +338,11 @@ export const Sentencing = () => {
             animate={{ opacity: 1, y: 0 }}
             className="text-4xl lg:text-6xl font-black mb-8 tracking-tighter italic leading-tight"
           >
-            대구 음주운전 양형자료 준비, <br className="hidden md:block" />
+            음주운전 양형자료 준비, <br className="hidden md:block" />
             <span className="text-primary underline decoration-primary/20 underline-offset-8">제대로 해야 결과가 달라집니다</span>
           </motion.h1>
           <p className="text-slate-400 text-lg max-w-3xl mx-auto font-medium leading-relaxed">
-            대구에서 음주운전 양형자료를 준비하는 많은 분들이 무엇을 어떻게 준비해야 하는지 몰라 어려움을 겪습니다.<br className="hidden md:block"/>
+            음주운전 양형자료를 준비하는 많은 분들이 무엇을 어떻게 준비해야 하는지 몰라 어려움을 겪습니다.<br className="hidden md:block"/>
             양형자료는 단순한 서류가 아니라 재범방지 노력과 변화 가능성을 객관적으로 보여주는 핵심 자료입니다.<br className="hidden md:block"/>
             본 센터에서는 심리상담, 재범방지 교육, 행동 교정 프로그램을 통해 법원에 제출 가능한 체계적인 양형자료를 준비할 수 있도록 지원합니다.
           </p>
@@ -365,7 +365,7 @@ export const Sentencing = () => {
               </h2>
               <div className="space-y-8 text-xl font-bold leading-relaxed text-slate-300">
                 <p>
-                  대구 음주운전 사건에서 중요한 것은 단순한 반성이 아니라 <span className="text-white">'재범 가능성을 얼마나 낮추었는지'</span>입니다. 
+                  음주운전 사건에서 중요한 것은 단순한 반성이 아니라 <span className="text-white">'재범 가능성을 얼마나 낮추었는지'</span>입니다. 
                   이를 입증하는 가장 중요한 방법이 바로 심리상담과 재범방지 교육을 기반으로 한 양형자료입니다.
                 </p>
                 <p>
@@ -408,7 +408,7 @@ export const Sentencing = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-black text-slate-900 mb-6 tracking-tighter italic">지원 가능한 <span className="text-primary underline decoration-primary/20 underline-offset-8">핵심 양형자료</span></h2>
             <p className="text-slate-500 text-lg font-bold">
-              아래 양형자료는 실제 대구 음주운전 사건에서 <br className="sm:hidden"/>
+              아래 양형자료는 실제 음주운전 사건에서 <br className="sm:hidden"/>
               재범 방지 노력과 변화 과정을 설명하는 데 사용되는 핵심 자료입니다.
             </p>
           </div>
@@ -457,7 +457,7 @@ export const Sentencing = () => {
               <span className="text-white/80 text-2xl lg:text-4xl mt-4 block">"지금의 선택이 결과를 바꿉니다."</span>
             </h2>
             <p className="text-primary-foreground/90 text-lg mb-12 font-bold leading-relaxed">
-              대구 음주운전 양형자료, 혼자 준비하지 마십시오.<br/>
+              음주운전 양형자료, 혼자 준비하지 마십시오.<br/>
               전문 상담을 통해 정확하게 준비하는 것이 중요합니다.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -130,9 +130,8 @@ export const About = () => {
                   근본적인 행동 변화를 이끌어내는 전문 기관입니다.
                 </p>
                 <p>
-                  대구 지역을 거점으로 다년간 쌓아온 임상 경험과 최신 심리학
-                  이론을 결합하여, 각 대상자의 특성에 맞는 개별화된 프로그램을
-                  운영하고 있습니다.
+                  다년간 쌓아온 임상 경험과 최신 심리학 이론을 결합하여, 각
+                  대상자의 특성에 맞는 개별화된 프로그램을 운영하고 있습니다.
                 </p>
               </div>
               <div className="grid grid-cols-2 gap-4 lg:gap-6 mt-8 lg:mt-12">
@@ -287,8 +286,8 @@ export const About = () => {
                     Vision
                   </h4>
                   <p className="text-xs lg:text-sm text-slate-400 leading-relaxed font-medium">
-                    대구 경북 지역 최고의 <br />
-                    음주운전 재범 방지 전문 기관
+                    최고의 전문성을 갖춘 <br />
+                    음주운전 재범방지 교육, 상담 기관
                   </p>
                 </div>
                 <div className="p-6 lg:p-8 bg-white/5 rounded-3xl border border-white/10">

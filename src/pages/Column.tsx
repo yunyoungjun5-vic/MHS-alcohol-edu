@@ -6,7 +6,6 @@ import {
   User,
   ArrowRight,
   X,
-  Shield,
   Clock,
 } from "lucide-react";
 
@@ -339,13 +338,10 @@ export const Column = () => {
                 </div>
 
                 {/* Action Footer */}
-                <div className="mt-12 pt-8 border-t border-slate-100 flex flex-col sm:flex-row justify-between items-center gap-4">
-                  <div className="flex items-center gap-1.5 text-primary text-sm font-bold">
-                    <Shield size={16} /> 대구 음주운전 재범방지 센터 보증 칼럼
-                  </div>
+                <div className="mt-12 pt-8 border-t border-slate-100 flex justify-end items-center">
                   <button
                     onClick={() => setSelectedColumn(null)}
-                    className="px-8 py-3.5 bg-slate-900 hover:bg-slate-800 text-white rounded-full font-bold text-sm transition-all"
+                    className="w-full sm:w-auto px-8 py-3.5 bg-slate-900 hover:bg-slate-800 text-white rounded-full font-bold text-sm transition-all text-center"
                   >
                     목록으로 돌아가기
                   </button>
