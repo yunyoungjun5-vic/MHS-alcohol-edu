@@ -495,7 +495,7 @@ export const Home = () => {
               협력 · 협약 · 출강 기관
             </h2>
             <p className="text-slate-500 max-w-4xl mx-auto font-medium text-base sm:text-lg leading-relaxed break-keep">
-              MHS 심리상담센터 산하 구미성범죄심리상담치료센터는 27년 이상의
+              MHS 심리상담센터 산하 한국음주운전재범방지교육상담센터는 27년 이상의
               임상 경험과 200여 개 공공기관 · 법률기관 · 교육기관 · 기업과의
               협력 실적을 기반으로 신뢰할 수 있는 전문 상담과 재범방지 교육을
               제공하고 있습니다.

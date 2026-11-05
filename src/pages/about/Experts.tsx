@@ -247,18 +247,38 @@ const expertGroups: ExpertItem[][] = [
       name: "문영애 교수",
       image:
         "https://res.cloudinary.com/dxjz9ksjg/image/upload/v1779201676/%EB%AC%B8%EC%98%81%EC%95%A0_%EA%B5%90%EC%88%981_q9eo9t.png",
-      title: "상담심리학 박사 / 한국신체심리치료 연구소 대표",
-      desc: "음주 문제 해결을 위한 신체심리 회복 및 휄든크라이스 전문가.",
+      title: "상담심리학 박사 / 휠든크라이스 수퍼바이저",
+      desc: "움직임 치료 · 꿈치료 · 코칭을 통한 신체심리 회복 및 전인적 변화 지원.",
       roles:
-        "상담심리학 박사 / 한국신체심리치료 연구소 대표 / 휄든크라이스 전문가",
+        "상담심리학 박사 / 자아초월상담학 박사 / 휠든크라이스 수퍼바이저",
       bioSections: [
         {
-          title: "학력 및 주요 약력",
+          title: "학력 및 학위",
           icon: "edu",
           items: [
             "상담심리학 박사",
+            "자아초월상담학 박사",
+            "성균관대학교 체육학 박사과정 이수",
+          ],
+        },
+        {
+          title: "전문 분야",
+          icon: "society",
+          items: [
+            "움직임 치료",
+            "꿈치료",
+            "전문 코칭",
+          ],
+        },
+        {
+          title: "경력 및 주요 활동",
+          icon: "career",
+          items: [
+            "휠든크라이스 수퍼바이저",
+            "상담코치협회 이사",
             "한국신체심리치료 연구소 대표",
-            "휄든크라이스 전문가",
+            "자기치유 관련 저서 공저",
+            "방송 특강, 움직임 치료, 꿈치료, 기업 강의 및 코칭",
           ],
         },
       ],
@@ -267,7 +287,7 @@ const expertGroups: ExpertItem[][] = [
       name: "임진수 박사",
       image: "/assets/aistudio/1446168883094_f6a2a5ce.jpg",
       imagePosition: "object-[center_18%]",
-      title: "정신분석가 / 대구 프로이트 라캉 학교 대표",
+      title: "정신분석가 / 프로이트 라캉 학회 대표",
       desc: "심층 정신분석을 통한 무의식적 충동 이해와 근본적 행동 변화 자문.",
       roles:
         "서울대학교 박사 / 계명대학교 교수 역임 / 파리 VIII 대학 정신분석학과 DEA",
@@ -335,7 +355,7 @@ const expertGroups: ExpertItem[][] = [
       ],
     },
   ],
-  // 4행 2열
+  // 4행 3열 (유보경 선생님 · 함종수 교수 · 윤송이 선생님)
   [
     {
       name: "유보경 선생님",
@@ -389,17 +409,52 @@ const expertGroups: ExpertItem[][] = [
       ],
     },
     {
+      name: "함종수 교수",
+      image:
+        "https://res.cloudinary.com/dxjz9ksjg/image/upload/v1793856790/professor_wut7ut.png",
+      title: "애리조나 주립대 철학과 교수 역임 / 미국상담심리치료학회(AACPT) 회장",
+      desc: "철학과 심리학의 깊이 있는 통찰을 통한 근본적 인지 변화 및 회복 자문.",
+      roles:
+        "애리조나 주립대 철학과 교수 역임 / 미국상담심리치료학회 회장 / 철학·신학·심리학 박사",
+      bioSections: [
+        {
+          title: "학력 및 학위",
+          icon: "edu",
+          items: [
+            "철학박사 (Ph.D.)",
+            "신학박사 (Th.D.)",
+            "심리학박사 (Psy.D.)",
+          ],
+        },
+        {
+          title: "주요 경력 및 직책",
+          icon: "career",
+          items: [
+            "애리조나 주립대 철학과 교수 역임",
+            "미국상담심리치료학회(AACPT) 회장",
+            "미국장로교총회(GAPC) 목사",
+          ],
+        },
+        {
+          title: "수상 내역",
+          icon: "award",
+          items: ["미국 LA 시장상 수상"],
+        },
+      ],
+    },
+    {
       name: "윤송이 선생님",
       image:
         "https://res.cloudinary.com/dxjz9ksjg/image/upload/v1779201655/%EC%9C%A4%EC%86%A1%EC%9D%B4_%EC%84%A0%EC%83%9D%EB%8B%98_2_q34upo.png",
-      title: "상담심리 전문가 / 재범방지 교육 강사",
+      title: "임상심리사 / 재범방지 교육 강사",
       desc: "인지행동치료 기반의 음주운전 감수성 향상 교육.",
-      roles: "상담심리 전문가 / 재범방지 교육 강사",
+      roles: "임상심리사 2급(국가자격증) / 상담심리 전문가 / 재범방지 교육 강사",
       bioSections: [
         {
           title: "학력 및 자격 사항",
           icon: "edu",
           items: [
+            "임상심리사 2급(국가자격증)",
             "경북대학교대학원 심리학 석사",
             "서불대 신심통합치유학과 뇌인지과학 박사수료",
             "위로상담가 수료, 청소년상담사 3급",
@@ -431,30 +486,63 @@ const expertGroups: ExpertItem[][] = [
       name: "전경숙 선생님",
       image:
         "https://res.cloudinary.com/dxjz9ksjg/image/upload/v1779198673/%EC%A0%84%EA%B2%BD%EC%88%99_%EC%84%A0%EC%83%9D%EB%8B%98_hctbka.png",
-      title: "상담심리 전문가 / 중독 상담사",
+      title: "한국뇌기반심리상담 대표 / 상담심리 전문가",
       desc: "음주 습관 분석 및 알코올 중독 문제 해결을 위한 전문 심리 상담.",
-      roles: "상담심리 전문가 / 중독 상담사 / 성상담 전문가",
+      roles: "한국뇌기반심리상담 대표 / 뇌인지 박사 수료 / 교육학 명예박사",
       bioSections: [
         {
           title: "학력 및 저서",
           icon: "edu",
           items: [
-            "서울불교대학대학원 뇌과학 박사 이수",
-            "서불대 상담심리학과 석사 졸업",
-            "서불대 명상학 석사 이수",
+            "자초월상담심리학 석사",
+            "명상학 이수",
+            "뇌인지 박사 수료",
+            "International Christian College HONORARY DOCTOR EDUCATION (Ed.D) 교육학명예박사",
             "『아이의 몸과 뇌 바뀌면 성적이 오른다』 공저",
           ],
         },
         {
-          title: "주요 경력 및 자격",
+          title: "주요 경력",
           icon: "career",
           items: [
-            "서초문화원 명상 지도강사",
-            "한국뇌기반 심리상담센터 대표",
-            "조장희 박사님 뇌과학문화운동 대표",
+            "한국뇌기반심리상담 대표",
+            "교육분야 20년 · 청소년 진로 및 발달상담",
+            "조장희 박사님과 뇌과학문화운동 대표",
+            "한국상담학회 회원",
+            "아봐타/마스터",
+          ],
+        },
+        {
+          title: "활동 이력",
+          icon: "broadcast",
+          items: [
+            "2015년 박문호 박사 뇌과학문화운동 8회차 진행",
+            "2016년~2021년 조장희 박사 썸머 진행",
+            "2019년~2021년 서초문화원 명상강의",
+            "2022년 인천지역 학교상담교사 교육",
+          ],
+        },
+        {
+          title: "강의 및 프로그램",
+          icon: "society",
+          items: [
+            "뇌상담사 양성과정 강의",
+            "코칭프로그램 진행",
+            "기아, 현대자동차 프로그램 진행",
+            "코오롱기업연수 프로그램 진행",
+            "NAVER 꿈분석 전문상담",
+            "NAVER 명상상담",
+          ],
+        },
+        {
+          title: "자격 사항",
+          icon: "award",
+          items: [
+            "뇌상담사",
+            "진로상담사",
+            "명상상담",
             "뇌교육지도사",
-            "한국심리상담학회 회원",
-            "중독상담사, 성폭력상담사, 학교폭력상담사 등 다수 보유",
+            "중독상담사, 성폭력상담사, 학교폭력상담사",
           ],
         },
       ],
@@ -563,7 +651,7 @@ export const Experts = () => {
           className="mb-12"
         >
           <h2 className="text-3xl font-black text-slate-900 mb-4 tracking-tight">
-            음주운전 특화 전문가 그룹
+            음주운전 특화 전문가 및 자문위원
           </h2>
           <p className="text-slate-500 font-medium">
             단순 심리상담사가 아닌, 구조적 개입과 행동 교정의 전문가들이

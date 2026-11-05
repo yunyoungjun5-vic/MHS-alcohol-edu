@@ -16,6 +16,7 @@ const routes = [
   '/services/legal-collaboration',
   '/program',
   '/cases',
+  '/library/notice',
   '/library/column',
   '/library/cases',
   '/online-program',

@@ -18,6 +18,7 @@ import { LegalCollaboration } from "./pages/services/LegalCollaboration";
 import { Program } from "./pages/Program";
 import { Cases } from "./pages/Cases";
 import { Column } from "./pages/Column";
+import { Notice } from "./pages/Notice";
 import { OnlineProgram } from "./pages/OnlineProgram";
 import { Sentencing } from "./pages/Sentencing";
 import { Pricing } from "./pages/Pricing";
@@ -63,6 +64,15 @@ export default function App() {
             />
             <Route path="/program" element={<Program />} />
             <Route path="/cases" element={<Cases />} />
+            <Route path="/library/notice" element={<Notice />} />
+            <Route
+              path="/notice"
+              element={<Navigate to="/library/notice" replace />}
+            />
+            <Route
+              path="/library"
+              element={<Navigate to="/library/notice" replace />}
+            />
             <Route path="/library/column" element={<Column />} />
             <Route path="/library/cases" element={<Cases />} />
             <Route path="/online-program" element={<OnlineProgram />} />

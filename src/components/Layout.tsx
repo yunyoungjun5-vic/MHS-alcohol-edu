@@ -49,6 +49,7 @@ export const Header = () => {
       name: "자료실",
       path: "/library",
       subItems: [
+        { name: "공지사항", path: "/library/notice" },
         { name: "전문가 칼럼", path: "/library/column" },
         { name: "변화 사례", path: "/library/cases" },
       ],
@@ -212,10 +213,87 @@ export const Header = () => {
 };
 
 export const Footer = () => {
+  const [selectedBranch, setSelectedBranch] = useState("서울점");
+
+  const branches = [
+    {
+      name: "서울점",
+      desc: "서울·수도권 및 중부권 음주운전 양형자료, 재범방지 심리상담, 재범방지 교육 전문센터",
+    },
+    {
+      name: "구미점",
+      desc: "구미 및 경북 서남부 음주운전 양형자료, 재범방지 심리상담, 재범방지 교육 전문센터",
+    },
+    {
+      name: "창원점",
+      desc: "창원·경남 지역 음주운전 양형자료, 재범방지 심리상담, 재범방지 교육 전문센터",
+    },
+    {
+      name: "부산점",
+      desc: "부산·울산·동남권 음주운전 양형자료, 재범방지 심리상담, 재범방지 교육 전문센터",
+    },
+    {
+      name: "대구점",
+      desc: "대구·경북 지역 음주운전 양형자료, 재범방지 심리상담, 재범방지 교육 전문센터",
+    },
+  ];
+
   return (
-    <footer className="bg-slate-700 text-slate-300 py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+    <>
+      {/* 음주운전재범방지 심리상담 & 교육센터소개 Section */}
+      <section className="bg-[#faf6f2] border-t border-slate-200/70 py-12 lg:py-16 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 tracking-tight mb-8">
+            음주운전재범방지{" "}
+            <span className="text-primary font-black">
+              심리상담 &amp; 교육센터소개
+            </span>
+          </h3>
+
+          <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-4 mb-6">
+            {branches.map((branch) => {
+              const isSelected = selectedBranch === branch.name;
+              return (
+                <button
+                  key={branch.name}
+                  type="button"
+                  onClick={() => setSelectedBranch(branch.name)}
+                  className={`px-7 sm:px-9 py-3 sm:py-3.5 rounded-full text-sm sm:text-base font-extrabold transition-all duration-200 cursor-pointer shadow-sm ${
+                    isSelected
+                      ? "bg-primary text-white border-2 border-primary shadow-md shadow-primary/25 scale-105"
+                      : "bg-white text-slate-700 border border-slate-200 hover:border-primary hover:text-primary hover:bg-slate-50"
+                  }`}
+                >
+                  {branch.name}
+                </button>
+              );
+            })}
+          </div>
+
+          <div className="max-w-xl mx-auto mt-6 p-4 sm:p-5 bg-white rounded-2xl border border-slate-200/80 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="text-center sm:text-left">
+              <p className="text-xs font-bold text-primary uppercase tracking-wider mb-1">
+                {selectedBranch} 안내
+              </p>
+              <p className="text-sm font-semibold text-slate-700 break-keep">
+                {branches.find((b) => b.name === selectedBranch)?.desc}
+              </p>
+            </div>
+            <a
+              href="tel:0507-1351-5463"
+              className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary hover:bg-secondary text-white text-xs sm:text-sm font-bold rounded-full transition-all shrink-0 shadow-sm hover:shadow"
+            >
+              <Phone size={14} />
+              <span>지점 문의</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Main Footer */}
+      <footer className="bg-slate-700 text-slate-300 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           <div className="col-span-1 lg:col-span-2">
             <div className="flex items-center gap-2 mb-6">
               <Shield className="text-primary" size={32} />
@@ -322,6 +400,14 @@ export const Footer = () => {
               </li>
               <li>
                 <Link
+                  to="/library/notice"
+                  className="hover:text-primary transition-colors"
+                >
+                  공지사항
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/library/column"
                   className="hover:text-primary transition-colors"
                 >
@@ -383,5 +469,6 @@ export const Footer = () => {
         </div>
       </div>
     </footer>
+    </>
   );
 };

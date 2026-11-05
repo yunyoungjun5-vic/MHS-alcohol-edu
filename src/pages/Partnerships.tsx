@@ -9,7 +9,7 @@ export const Partnerships = () => {
     header: {
       category: "Partnership & Networks",
       title: "협력 · 협약 · 출강 기관",
-      description: "한국음주운전재범방지교육상담센터는 27년 이상의 임상 경험과 200여 개 공공기관 · 법률기관 · 교육기관 · 기업과의 협력 실적을 기반으로 신뢰할 수 있는 전문 상담과 재범방지 교육을 제공하고 있습니다."
+      description: "MHS 심리상담센터 산하 한국음주운전재범방지교육상담센터는 27년 이상의 임상 경험과 200여 개 공공기관 · 법률기관 · 교육기관 · 기업과의 협력 실적을 기반으로 신뢰할 수 있는 전문 상담과 재범방지 교육을 제공하고 있습니다."
     },
     // Category 1: 공공기관 및 유관기관 (17 Logo Slots, updated with provided Cloudinary URLs & official homepage links)
     publicAgencies: [
