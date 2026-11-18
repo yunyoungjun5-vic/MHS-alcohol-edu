@@ -15,7 +15,7 @@ const programSteps = [
     step: "2단계",
     title: "행동 패턴 분석",
     desc: "“음주와 충동의 반복 구조를 파악”",
-    image: "https://images.unsplash.com/photo-1454165833767-027ffea9e41b?auto=format&fit=crop&q=80&w=800"
+    image: "https://res.cloudinary.com/dxjz9ksjg/image/upload/v1793886451/cc_gye1vt.png"
   },
   {
     step: "3단계",

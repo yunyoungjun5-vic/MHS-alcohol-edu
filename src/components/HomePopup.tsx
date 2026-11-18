@@ -1,21 +1,25 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, ArrowRight, Tv } from "lucide-react";
+import { X, ArrowRight, Tv, Users } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { PricingContent } from "../pages/Pricing";
 
 const STORAGE_KEY_1 = "korea_dui_hide_pricing_popup_until";
 const STORAGE_KEY_2 = "daegu_dui_hide_popup2_until";
+const STORAGE_KEY_3 = "korea_dui_hide_popup3_until";
 
 const POPUP_IMAGE_URL_2 =
   "https://res.cloudinary.com/dxjz9ksjg/image/upload/v1792067983/%EC%A3%BC%EC%9A%94_%EB%B0%A9%EC%86%A1_%EC%96%B8%EB%A1%A0_%EA%B0%95%EC%A1%B0_%EC%83%81%EB%8B%B4%EC%84%BC%ED%84%B0_%ED%8F%AC%EC%8A%A4%ED%84%B0_e6ln84.png";
+const POPUP_IMAGE_URL_3 =
+  "https://res.cloudinary.com/dxjz9ksjg/image/upload/v1794922981/afafa_rkydk9.png";
 
-type PopupStep = 1 | 2 | null;
+type PopupStep = 1 | 2 | 3 | null;
 
 export const HomePopup: React.FC = () => {
   const [activePopup, setActivePopup] = useState<PopupStep>(null);
   const [dontShowToday1, setDontShowToday1] = useState(false);
   const [dontShowToday2, setDontShowToday2] = useState(false);
+  const [dontShowToday3, setDontShowToday3] = useState(false);
   const navigate = useNavigate();
 
   const isStorageHidden = (key: string): boolean => {
@@ -54,11 +58,14 @@ export const HomePopup: React.FC = () => {
   useEffect(() => {
     const isP1Hidden = isStorageHidden(STORAGE_KEY_1);
     const isP2Hidden = isStorageHidden(STORAGE_KEY_2);
+    const isP3Hidden = isStorageHidden(STORAGE_KEY_3);
 
     if (!isP1Hidden) {
       setActivePopup(1);
     } else if (!isP2Hidden) {
       setActivePopup(2);
+    } else if (!isP3Hidden) {
+      setActivePopup(3);
     } else {
       setActivePopup(null);
     }
@@ -70,12 +77,18 @@ export const HomePopup: React.FC = () => {
       setHideTodayInStorage(STORAGE_KEY_1);
     }
 
-    // Immediately trigger Popup 2 if not hidden
+    // Immediately trigger Popup 2 (or 3 if 2 is hidden)
     const isP2Hidden = isStorageHidden(STORAGE_KEY_2);
+    const isP3Hidden = isStorageHidden(STORAGE_KEY_3);
     if (!isP2Hidden) {
       setActivePopup(null);
       setTimeout(() => {
         setActivePopup(2);
+      }, 150);
+    } else if (!isP3Hidden) {
+      setActivePopup(null);
+      setTimeout(() => {
+        setActivePopup(3);
       }, 150);
     } else {
       setActivePopup(null);
@@ -87,6 +100,24 @@ export const HomePopup: React.FC = () => {
     if (hideToday || dontShowToday2) {
       setHideTodayInStorage(STORAGE_KEY_2);
     }
+
+    // Trigger Popup 3 if not hidden
+    const isP3Hidden = isStorageHidden(STORAGE_KEY_3);
+    if (!isP3Hidden) {
+      setActivePopup(null);
+      setTimeout(() => {
+        setActivePopup(3);
+      }, 150);
+    } else {
+      setActivePopup(null);
+    }
+  };
+
+  // Popup 3 Close handler
+  const handleClosePopup3 = (hideToday = false) => {
+    if (hideToday || dontShowToday3) {
+      setHideTodayInStorage(STORAGE_KEY_3);
+    }
     setActivePopup(null);
   };
 
@@ -96,6 +127,14 @@ export const HomePopup: React.FC = () => {
     }
     setActivePopup(null);
     navigate("/about/media");
+  };
+
+  const handleExpertsLinkClick = () => {
+    if (dontShowToday3) {
+      setHideTodayInStorage(STORAGE_KEY_3);
+    }
+    setActivePopup(null);
+    navigate("/about/experts");
   };
 
   if (!activePopup) return null;
@@ -257,6 +296,95 @@ export const HomePopup: React.FC = () => {
               <button
                 type="button"
                 onClick={() => handleClosePopup2(false)}
+                className="hover:text-white font-medium px-2 py-1 transition-colors cursor-pointer hover:underline"
+              >
+                창 닫기
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      )}
+
+      {activePopup === 3 && (
+        <div
+          key="popup-3"
+          className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/60 backdrop-blur-[2px] overflow-y-auto"
+          onClick={() => handleClosePopup3(false)}
+          aria-modal="true"
+          role="dialog"
+          aria-label="상담 전문가 안내 팝업"
+        >
+          {/* Popup 3 Card (Same sizing & zero-margin layout as Popup 2) */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.94, y: 15 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.94, y: 15 }}
+            transition={{ duration: 0.25, ease: "easeOut" }}
+            className="relative w-full max-w-[340px] xs:max-w-[380px] sm:max-w-[440px] md:max-w-[560px] lg:max-w-[640px] bg-slate-900 rounded-2xl shadow-2xl overflow-hidden flex flex-col my-auto border border-slate-700/50"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Top Close Button (floating) */}
+            <button
+              type="button"
+              onClick={() => handleClosePopup3(false)}
+              className="absolute top-3 right-3 z-20 w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-black/65 hover:bg-black/90 text-white flex items-center justify-center transition-all backdrop-blur-md cursor-pointer shadow-lg"
+              aria-label="팝업 닫기"
+            >
+              <X className="w-5 h-5 sm:w-5.5 sm:h-5.5" />
+            </button>
+
+            {/* Poster Image (Zero Margins, Full-bleed, Clickable to Experts Page) */}
+            <Link
+              to="/about/experts"
+              onClick={handleExpertsLinkClick}
+              className="relative w-full block cursor-pointer group"
+              title="상담전문가 보기"
+            >
+              <img
+                src={POPUP_IMAGE_URL_3}
+                alt="상담 전문가 안내 포스터"
+                className="w-full h-auto block select-none"
+                loading="eager"
+              />
+            </Link>
+
+            {/* CTA Experts Button (Seamless Edge-to-Edge with Zero Margins) */}
+            <Link
+              to="/about/experts"
+              onClick={handleExpertsLinkClick}
+              className="w-full py-3.5 sm:py-4 px-4 bg-secondary hover:bg-[#0d47a1] active:bg-[#0a387e] text-white font-bold text-base sm:text-lg flex items-center justify-center gap-2 transition-colors cursor-pointer text-center select-none"
+            >
+              <Users className="w-5 h-5" />
+              <span>상담전문가 보기</span>
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+
+            {/* Bottom Footer Bar (Zero Margin, Flush with CTA) */}
+            <div className="flex items-center justify-between px-4 sm:px-5 py-2.5 sm:py-3 bg-slate-950 text-slate-300 text-xs sm:text-sm select-none border-t border-slate-800/80">
+              <button
+                type="button"
+                onClick={() => handleClosePopup3(true)}
+                className="hover:text-white flex items-center gap-2 transition-colors cursor-pointer group py-1 text-left"
+              >
+                <input
+                  type="checkbox"
+                  id="dontShowTodayCheck3"
+                  checked={dontShowToday3}
+                  onChange={(e) => {
+                    setDontShowToday3(e.target.checked);
+                    if (e.target.checked) {
+                      handleClosePopup3(true);
+                    }
+                  }}
+                  onClick={(e) => e.stopPropagation()}
+                  className="w-4 h-4 rounded text-secondary border-slate-600 bg-slate-800 cursor-pointer accent-[#1565C0]"
+                />
+                <span className="group-hover:underline">오늘 하루 보지 않기</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={() => handleClosePopup3(false)}
                 className="hover:text-white font-medium px-2 py-1 transition-colors cursor-pointer hover:underline"
               >
                 창 닫기

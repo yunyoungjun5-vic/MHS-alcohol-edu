@@ -36,7 +36,7 @@ const coreMaterials = [
       "이수 완료일"
     ],
     meaning: "“지속적인 개선 과정에 있다”는 점을 명확히 보여주는 자료",
-    image: "https://images.unsplash.com/photo-1523240715630-9918c1c46e7d?auto=format&fit=crop&q=80&w=800"
+    image: "https://res.cloudinary.com/dxjz9ksjg/image/upload/v1793886450/bb_xwqruh.png"
   },
   {
     id: 3,
@@ -98,7 +98,7 @@ const coreMaterials = [
       "관리 및 개입 방향"
     ],
     meaning: "“위험을 통제하고 있다”는 점을 설득력 있게 전달",
-    image: "https://images.unsplash.com/photo-1454165833767-027ffea9e41b?auto=format&fit=crop&q=80&w=800"
+    image: "https://res.cloudinary.com/dxjz9ksjg/image/upload/v1793886446/aa_xlebzw.png"
   },
   {
     id: 7,

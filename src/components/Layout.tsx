@@ -229,6 +229,9 @@ export const Footer = () => {
               진단과 체계적인 재범 방지 프로그램을 통해 당신의 소중한 일상을
               다시 세우는 든든한 조력자가 되겠습니다.
             </p>
+            <p className="mt-4 text-sm font-semibold text-slate-300">
+              대표자 : 윤영준
+            </p>
           </div>
           <div>
             <h4 className="text-white font-bold mb-6">Quick Links</h4>

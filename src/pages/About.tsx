@@ -41,6 +41,9 @@ export const About = () => {
             한국음주운전재범방지교육상담센터는 <br />
             비난보다는 변화를, 처벌보다는 회복을 지향합니다.
           </p>
+          <p className="mt-6 text-sm lg:text-base font-bold text-slate-300 tracking-wide">
+            대표자 : 윤영준
+          </p>
         </div>
       </section>
 

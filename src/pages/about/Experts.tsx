@@ -573,7 +573,7 @@ const expertGroups: ExpertItem[][] = [
         "https://res.cloudinary.com/dxjz9ksjg/image/upload/v1779200461/ChatGPT_Image_2026%EB%85%84_5%EC%9B%94_19%EC%9D%BC_%EC%98%A4%ED%9B%84_11_20_53_jagksr.png",
       title: "상담심리 전문가 / 청소년 상담사",
       desc: "내담자의 심리적 안정과 긍정적 행동 변화 지원.",
-      roles: "상담심리 전문가 / 청소년 상담사",
+      roles: "임상심리사 1급(국가자격증) / 상담심리 전문가 / 청소년 상담사",
       bioSections: [
         {
           title: "학력 및 자격",
@@ -581,7 +581,7 @@ const expertGroups: ExpertItem[][] = [
           items: [
             "최면상담학 박사",
             "심리상담학 석사",
-            "임상심리사 1급",
+            "임상심리사 1급(국가자격증)",
             "사회복지사 1급",
             "청소년상담사 2급",
           ],
